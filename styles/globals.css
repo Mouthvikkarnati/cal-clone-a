@@ -361,3 +361,10 @@ body {
 .footer-btn:hover {
   background: #e5e7eb;
 }
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
