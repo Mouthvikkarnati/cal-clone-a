@@ -1,0 +1,29 @@
+.slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.slot {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.available {
+  background: #dcfce7;
+  color: #065f46;
+  cursor: pointer;
+}
+
+.booked {
+  background: #fee2e2;
+  color: #991b1b;
+  cursor: not-allowed;
+}
+
+.selected {
+  background: #2563eb;
+  color: white;
+}

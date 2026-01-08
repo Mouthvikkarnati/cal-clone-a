@@ -1,0 +1,17 @@
+.calendar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.day {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.active {
+  background: #111827;
+  color: white;
+}

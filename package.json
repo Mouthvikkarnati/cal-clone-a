@@ -1,0 +1,15 @@
+{
+  "name": "cal-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "framer-motion": "^12.24.11",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
