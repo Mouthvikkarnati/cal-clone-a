@@ -6,7 +6,7 @@ export default function Dashboard() {
   const [data, setData] = useState({ upcoming: [], past: [] });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/bookings")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings`)
       .then(res => res.json())
       .then(setData);
   }, []);
@@ -14,7 +14,7 @@ export default function Dashboard() {
   async function cancelBooking(id) {
     if (!confirm("Cancel this booking?")) return;
 
-    await fetch(`http://localhost:5000/api/bookings/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings/${id}`, {
       method: "DELETE"
     });
 
@@ -95,3 +95,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
