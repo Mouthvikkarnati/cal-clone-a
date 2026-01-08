@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start -p 10000"
+}
+,
   "dependencies": {
     "dayjs": "^1.11.10",
     "framer-motion": "^12.24.11",
@@ -13,3 +16,4 @@
     "react-dom": "^18.2.0"
   }
 }
+
