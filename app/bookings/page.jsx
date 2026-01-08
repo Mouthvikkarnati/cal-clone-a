@@ -6,7 +6,7 @@ export default function BookingsPage() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/bookings")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings`)
       .then(r => r.json())
       .then(setBookings);
   }, []);
@@ -14,7 +14,7 @@ export default function BookingsPage() {
   async function reschedule(id) {
     const start = prompt("New start ISO (YYYY-MM-DDTHH:MM:SSZ)");
     const end = prompt("New end ISO");
-    await fetch(`http://localhost:5000/api/bookings/${id}/reschedule`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings/${id}/reschedule`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ start, end })
@@ -39,3 +39,4 @@ export default function BookingsPage() {
     </div>
   );
 }
+
