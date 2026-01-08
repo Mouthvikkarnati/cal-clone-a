@@ -13,7 +13,7 @@ export default function BookingPage({ params }) {
 
   // Fetch event details
   useEffect(() => {
-    fetch(`http://localhost:5000/api/public/${params.slug}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/public/${params.slug}`)
       .then(res => res.json())
       .then(data => setEvent(data));
   }, [params.slug]);
@@ -26,7 +26,7 @@ export default function BookingPage({ params }) {
     setSelectedSlot(null);
 
     fetch(
-      `http://localhost:5000/api/public/${params.slug}/slots?date=${dateStr}`
+      `${process.env.NEXT_PUBLIC_API_URL}/api/public/${params.slug}/slots?date=${dateStr}`
     )
       .then(res => res.json())
       .then(data => {
@@ -86,3 +86,4 @@ export default function BookingPage({ params }) {
     </div>
   );
 }
+
